@@ -1,6 +1,9 @@
 import React from "react";
 import logo from "./logo.svg";
+
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import Projects from "./projects";
 
 function App() {
@@ -14,7 +17,6 @@ function App() {
       </header>
 
       <main>
-        main section
         <Projects />
       </main>
 

@@ -1,5 +1,7 @@
 import React from "react";
 import AddEmployee from "./AddEmployee";
+import "./styles.css";
+
 // import DisplayEmployees from './display-employees'
 
 const EmployeeDetails = () => {
@@ -29,7 +31,39 @@ const EmployeeDetails = () => {
 const DisplayEmployees = props => {
   const { employeeDetails } = props;
 
-  return <div className="col-sm">{employeeDetails.map(item => item.name)}</div>;
+  return (
+    <div className="col-sm">
+      <table className="table">
+        <caption>Employee Promotion details.</caption>
+        <thead>
+          <tr>
+            <th>Serial No.</th>
+            <th>Employee Name</th>
+            <th>Current Salary</th>
+            <th>Promoted (y/n)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {employeeDetails.map(({ name, salary, isPromoted }, index) => {
+            return (
+              <tr key={index}>
+                <td>{index + 1}</td>
+                <td>{name}</td>
+                <td>${salary}</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    defaultChecked={isPromoted}
+                    // onChange={() => updatePayload(index)}
+                  />
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
 };
 
 export default EmployeeDetails;

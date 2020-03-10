@@ -32,7 +32,7 @@ const DisplayEmployees = props => {
   const { employeeDetails } = props;
 
   return (
-    <div className="col-sm">
+    <div className="col-md">
       <table className="table">
         <caption>Employee Promotion details.</caption>
         <thead>

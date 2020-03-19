@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AddEmployee from "./AddEmployee";
 import "./styles.css";
 
@@ -6,12 +6,12 @@ import "./styles.css";
 
 const EmployeeDetails = () => {
   /** get it from request and save it in state */
-  let employeeDetails = [
+  const [employeeDetails, setEmpDetails] = useState([
     { name: "Shubham", isPromoted: true, salary: 100 },
     { name: "Arora", isPromoted: false, salary: 150 },
     { name: "Sh", isPromoted: true, salary: 200 },
     { name: "AB", isPromoted: false, salary: 250 }
-  ];
+  ]);
 
   // const noOfPromoted = state.filter(item => item.isPromoted).length;
   // let salaries = state.map(item => item.salary);
@@ -21,7 +21,10 @@ const EmployeeDetails = () => {
 
   return (
     <div className="row">
-      <AddEmployee />
+      <AddEmployee
+        employeeDetails={employeeDetails}
+        setEmpDetails={setEmpDetails}
+      />
 
       <DisplayEmployees employeeDetails={employeeDetails} />
     </div>

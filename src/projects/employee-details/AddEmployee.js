@@ -1,35 +1,40 @@
 import React from "react";
 import "./styles.css";
+// import EmployeeDetails from ".";
 
-const handleEmployeInput = ({ target }) => {
-  console.log(target.value);
-  // const { name, value } = target;
-  // const { employee } = this.state;
-  // this.setState({
-  //   employee: { ...employee, [name]: value }
-  // });
-};
+const AddEmployee = props => {
+  const { employeeDetails, setEmpDetails } = props;
 
-const addEmployee = () => {
-  console.log("addEmployee");
+  const handleEmployeInput = ({ target }) => {
+    console.log(target.value);
+    const { name, value } = target;
+    // const { employee } = this.state;
+    // this.setState({
+    //   employee: { ...employee, [name]: value }
+    // });
+    // setEmpDetails([...employeeDetails, ...{ [name]: value }]);
+  };
 
-  // this.setState({
-  //      employees: [...this.state.employees, this.state.employee]
-  // })
-};
+  const addEmployee = () => {
+    console.log("addEmployee");
 
-const deleteEmployees = () => {
-  console.log("addEmployee");
+    // this.setState({
+    //      employees: [...this.state.employees, this.state.employee]
+    // })
+    // setEmpDetails([...employeeDetails, ...{ [name]: value }]);
+  };
 
-  // const {employees} = this.state
-  // this.setState({
-  //     employees: [...employees.filter(employee => !employee.isPromoted)]
-  // })
+  const deleteEmployees = () => {
+    console.log("addEmployee");
 
-  // state = state.filter(item => !item.isPromoted);
-};
+    // const {employees} = this.state
+    // this.setState({
+    //     employees: [...employees.filter(employee => !employee.isPromoted)]
+    // })
 
-const AddEmployee = () => {
+    // state = state.filter(item => !item.isPromoted);
+  };
+
   return (
     <div className="col-md">
       <div>

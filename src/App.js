@@ -10,10 +10,10 @@ import Header from "./components/header";
 
 function App() {
   return (
-    <div className="App container">
+    <div className="container">
       <Header title="Sameer Portfolio" logo={logo} />
 
-      <main>
+      <main className="">
         <Projects />
       </main>
 

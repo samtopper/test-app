@@ -11,11 +11,6 @@ import Header from "./components/header";
 function App() {
   return (
     <div className="App container">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
-        <h1>Manage Employees</h1>
-      </header>
       <Header title="Sameer Portfolio" logo={logo} />
 
       <main>

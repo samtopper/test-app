@@ -1,8 +1,8 @@
 import React from "react";
-import logo from "./logo.svg";
-
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+import logo from "./images/sameer-logo-white.jpg";
+import "./App.css";
 
 import Projects from "./projects";
 
